@@ -28,7 +28,7 @@
 `source myenv/bin/activate`<br/>
 
 
-## 4. Adding AWS Access Keys for CLI
+## 3. Adding AWS Access Keys for CLI
 
 ## Method 1: Using `aws configure` (Recommended for single profile)
 
@@ -100,7 +100,7 @@ This will show your account ID and user ARN if configured correctly.
 > **Security note**: Make sure your API keys have appropriate permissions and consider using IAM roles or temporary credentials for enhanced security.
 
 
-## 5. Authenticating Github profile in Linux
+## 4. Authenticating Github profile in Linux
 
 `git config --global user.name "Your Name"` <br/>
 `git config --global user.email "your.email@example.com"` <br/>
