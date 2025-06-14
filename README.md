@@ -98,3 +98,15 @@ aws sts get-caller-identity
 This will show your account ID and user ARN if configured correctly.
 
 > **Security note**: Make sure your API keys have appropriate permissions and consider using IAM roles or temporary credentials for enhanced security.
+
+
+## Authenticating Github profile in Linux
+
+`git config --global user.name "Your Name"` <br/>
+`git config --global user.email "your.email@example.com"` <br/>
+
+### Clone/authenticate using token
+
+`git clone https://github.com/username/repository.git`
+
+
