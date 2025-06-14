@@ -4,7 +4,7 @@
 
 ## For AWS Linux
 
-`sudo yum update -y \n` <br/>
+`sudo yum update -y` <br/>
 `sudo yum groupinstall "Development Tools" -y`<br/>
 `sudo yum install gcc openssl-devel bzip2-devel libffi-devel wget make zlib-devel xz-devel -y`<br/>
 
