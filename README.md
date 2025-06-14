@@ -2,13 +2,13 @@
 
 ### In this repository, I am going to define a step by step process on how to deploy my Backend server on AWS EC2 using Nginx
 
-## For AWS Linux
+## 1. For AWS Linux
 
 `sudo yum update -y` <br/>
 `sudo yum groupinstall "Development Tools" -y`<br/>
 `sudo yum install gcc openssl-devel bzip2-devel libffi-devel wget make zlib-devel xz-devel -y`<br/>
 
-## Install Python on Linux
+## 2. Install Python on Linux
 
 `cd /usr/src`<br/>
 `sudo wget https://www.python.org/ftp/python/3.12.3/Python-3.12.3.tgz`<br/>
@@ -28,7 +28,7 @@
 `source myenv/bin/activate`<br/>
 
 
-## Adding AWS Access Keys for CLI
+## 4. Adding AWS Access Keys for CLI
 
 ## Method 1: Using `aws configure` (Recommended for single profile)
 
@@ -100,7 +100,7 @@ This will show your account ID and user ARN if configured correctly.
 > **Security note**: Make sure your API keys have appropriate permissions and consider using IAM roles or temporary credentials for enhanced security.
 
 
-## Authenticating Github profile in Linux
+## 5. Authenticating Github profile in Linux
 
 `git config --global user.name "Your Name"` <br/>
 `git config --global user.email "your.email@example.com"` <br/>
