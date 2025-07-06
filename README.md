@@ -8,20 +8,30 @@
 `sudo yum groupinstall "Development Tools" -y`<br/>
 `sudo yum install -y mesa-libGL` <br/>
 `sudo yum install -y cmake pkgconfig libtool autoconf automake` <br/>
-`sudo yum install -y freetype-devel libpng-devel` <br/>
+`sudo yum install -y freetype-devel libpng-devel gcc gcc-c++ make pkgconfig libtool autoconf automake` <br/>
+`sudo yum install gcc openssl-devel bzip2-devel libffi-devel wget make zlib-devel xz-devel ImageMagick-devel libjpeg-turbo-devel libpng-devel -y`<br/>
 
 #### Clone and build zbar
 `git clone https://github.com/mchehab/zbar.git`<br/>
 `cd zbar`<br/>
 `autoreconf -vfi`<br/>
-`./configure --without-qt --without-gtk --without-x`<br/>
+`./configure --prefix=/usr/local --without-qt --without-gtk --without-x`<br/>
 `make`<br/>
 `sudo make install`<br/>
 
 #### Update library cache
 `sudo ldconfig`<br/>
+`echo 'export LD_LIBRARY_PATH=/usr/local/lib:$LD_LIBRARY_PATH' >> ~/.bashrc`
+`source ~/.bashrc`
 
-`sudo yum install gcc openssl-devel bzip2-devel libffi-devel wget make zlib-devel xz-devel -y`<br/>
+
+#### Check if library exists
+
+`find /usr -name "libzbar.so*" 2>/dev/null`
+`find /usr/local -name "libzbar.so*" 2>/dev/null`
+
+`export LD_LIBRARY_PATH=/usr/local/lib:$LD_LIBRARY_PATH`
+
 
 ## 2. Install Python on Linux
 
