@@ -6,6 +6,8 @@
 
 `sudo yum update -y` <br/>
 `sudo yum groupinstall "Development Tools" -y`<br/>
+`sudo yum install -y mesa-libGL` <br/>
+
 `sudo yum install gcc openssl-devel bzip2-devel libffi-devel wget make zlib-devel xz-devel -y`<br/>
 
 ## 2. Install Python on Linux
