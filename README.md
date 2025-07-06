@@ -7,6 +7,19 @@
 `sudo yum update -y` <br/>
 `sudo yum groupinstall "Development Tools" -y`<br/>
 `sudo yum install -y mesa-libGL` <br/>
+`sudo yum install -y cmake pkgconfig libtool autoconf automake` <br/>
+`sudo yum install -y freetype-devel libpng-devel` <br/>
+
+#### Clone and build zbar
+`git clone https://github.com/mchehab/zbar.git`<br/>
+`cd zbar`<br/>
+`autoreconf -vfi`<br/>
+`./configure --without-qt --without-gtk --without-x`<br/>
+`make`<br/>
+`sudo make install`<br/>
+
+#### Update library cache
+`sudo ldconfig`<br/>
 
 `sudo yum install gcc openssl-devel bzip2-devel libffi-devel wget make zlib-devel xz-devel -y`<br/>
 
